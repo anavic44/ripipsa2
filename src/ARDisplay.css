@@ -1,0 +1,27 @@
+/* File path: /src/components/ARDisplay.css*/
+.ar-display-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed; /* Use absolute if you want it to be part of a scrollable page */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .canvas-fullscreen {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .scale-control {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  #scale-range {
+    width: 50vw; /* Adjust the width of the slider as needed */
+  }
+  
