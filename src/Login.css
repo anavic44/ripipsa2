@@ -101,6 +101,32 @@ body, html {
       /* Here you'll include your illustration either as an img tag in the HTML, or as a background-image in CSS */
     }
   }
+
+  label {
+    color: white; /* Cambia el color del texto a blanco */
+  }
+
+  /* Estilos para el botón de Log out */
+.logout-button {
+  width: auto; /* Ancho automático para adaptarse al texto */
+  padding: 10px 15px; /* Padding ligeramente más pequeño que el login-button */
+  border: none;
+  border-radius: 10px;
+  background-color: #08f; /* Vibrant log out button color */
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Posicionamiento absoluto dentro del contenedor relativo */
+  top: 20px; /* 20px desde la parte superior del contenedor */
+  right: 20px; /* 20px desde la derecha del contenedor */
+}
+
+.logout-button:hover {
+  background-color: #06c; /* Slightly darker on hover */
+}
+
+  
   
   /* Additional media queries for larger screens can be added to adjust the layout */
   
