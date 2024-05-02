@@ -14,7 +14,7 @@ function Login() {
         try {
             const { data } = await axios.post('http://localhost:2023/api/validateUser', { username, password });
             if (data.success) {
-                navigate('/home'); // Redirección a la página de inicio solo si la autenticación es exitosa
+                navigate('/projects'); // Redirección a la página de inicio solo si la autenticación es exitosa
             } else {
                 setError(data.message || 'Error de autenticación'); // Mostrar mensaje de error si la autenticación falla
             }
