@@ -121,7 +121,7 @@ class ARExperience {
         this.renderer.render(this.scene, this.camera);
     }
 
-    loadModel() {
+    /* loadModel() {
         const mtlLoader = new MTLLoader();
         mtlLoader.load("./models/panelcajon.mtl", (materials) => {
             materials.preload();
@@ -133,7 +133,30 @@ class ARExperience {
                 this.scene.add(obj);
             });
         });
+    } */
+
+    loadModel(mtlUrl, objUrl) {
+        // Instantiate MTLLoader
+        const mtlLoader = new MTLLoader();
+        
+        // Load the MTL file
+        mtlLoader.load(mtlUrl, (materials) => {
+            materials.preload();
+            
+
+            // Instantiate OBJLoader and set the materials
+            const objLoader = new OBJLoader();
+            objLoader.setMaterials(materials);
+
+            // Load the OBJ file
+            objLoader.load(objUrl, (obj) => {
+                obj.scale.set(0.001, 0.001, 0.001);  // Adjust these values as needed to reduce the initial size
+                this.scene.add(obj);
+            });
+        });
     }
+
+    
     initScene() {
         document.querySelector(".container3D").appendChild(this.container);
         this.renderer.setAnimationLoop(this.render.bind(this));
