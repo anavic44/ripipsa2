@@ -20,6 +20,7 @@ function App() {
         <Route path = '/navbar' element = {<NavBar/>}></Route>
         <Route path = '/projects' element = {<Projects2/>}></Route>
         <Route path="/ar" element={<ARComponents />}></Route>
+        <Route path="/ar/:id_objeto" element={<ARComponents />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -15,6 +15,17 @@
 	font-weight: 400;
 }
 
+.botonAR {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #08f; /* Vibrant login button color */
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
 
 /************ Default Css ************/
 * {

@@ -7,18 +7,22 @@ import ColorSharp2 from "../assets/img/color-sharp2.png";
 import { NavBar } from './NavBar';  // Asegúrate de que la ruta es correcta
 import 'animate.css';
 import { ProjectCard } from "./ProjectCard";
+import { Link } from 'react-router-dom';
 
 export const Projects2 = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         const fetchProjects = async () => {
-            const ids = [1, 2, 3, 4, 5, 6];  // IDs correspondientes a los objetos en la API
-            const projectFetches = ids.map(id => axios.get(`http://localhost:2023/api/load-object/${id}`));
+            //const ids = [1, 2, 3, 4, 5, 6];  // IDs correspondientes a los objetos en la API
+            const projectFetches = (axios.get(`http://localhost:2023/api/load-all-objects`));
             try {
-                const responses = await Promise.all(projectFetches);
-                const projectsData = responses.map(response => response.data);
-                setProjects(projectsData);
+                
+                const {data} = await(axios.get(`http://localhost:2023/api/load-all-objects`));
+                //const projectsData = responses.map(response => response.data);
+                console.log(data)
+
+                setProjects(data);
             } catch (error) {
                 console.error("Error fetching project data: ", error);
             }
@@ -53,11 +57,13 @@ export const Projects2 = () => {
                                 <Tab.Content id="slideImUp" className={isVisible ? "animate_animated animate_slideInUp" : ""}>
                                     <Tab.Pane eventKey="first">
                                         <Row>
-                                            {projects.map((project, index) => (
+                                            {projects.map((project) => (
+                                                
                                                 <ProjectCard 
-                                                    key={index}
+                                                    key={project.id_objeto}
                                                     {...project}
                                                 />
+                                                
                                             ))}
                                         </Row>
                                     </Tab.Pane>

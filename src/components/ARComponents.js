@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ARExperience } from './Experience'; // Asegúrate de importar tu clase ARExperience y la función loadObjects
 import { useParams } from 'react-router-dom';
 
+
 const ARComponents = () => {
     
     const [arExperience, setARExperience] = useState(null);
@@ -15,8 +16,8 @@ const ARComponents = () => {
         const handleObjeto = async () => {
             
             try {
-                const { data } = await axios.get('http://localhost:2023/api/load-object/1');
-                //const { data } = await axios.get(`http://localhost:2023/api/load-object/${id_objeto}`);
+                //const { data } = await axios.get('http://localhost:2023/api/load-object/1');
+                const { data } = await axios.get(`http://localhost:2023/api/load-object/${id_objeto}`);
                 console.log(data.mtlUrl)
                 setMtlUrl (data.mtlUrl)
                 setObjUrl (data.objUrl)
@@ -45,8 +46,9 @@ const ARComponents = () => {
 
     return (
         <div className="container3D" style={{ width: "100%", height: "100vh" }}>
-            <button onClick={() => handleClickLoadModel(1)}>Cargar Modelo 1</button> 
-            <button onClick={() => handleClickLoadModel(2)}>Cargar Modelo 2</button>
+            <button onClick ={() => handleClickLoadModel()} className="botonAR">Cargar Modelo</button> 
+
+           
             
         </div>
     );
