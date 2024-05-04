@@ -16,7 +16,7 @@ function Signup() {
             console.log(data+' yo escribi esto con console log')
             if (data === 'Registro creado.') {
 
-                navigate('/home');
+                navigate('/projects/:userId');
             } else {
                 setError(data.message || 'Se ha registrado el usuario');
             }
