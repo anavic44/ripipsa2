@@ -17,7 +17,7 @@ import { NgrokUrl } from './NgrokUrl';
 
 export const Projects2 = () => {
     const [projects, setProjects] = useState([]);
-    const [userData, setUserData] = useState(null);
+    const [userData, setUserData] = useState([]);
     const [selectedValue, setSelectedValue] = useState('');
     const [proyecto, setProyecto] = useState(0);
     const [update, setUpdate]= useState(false);
