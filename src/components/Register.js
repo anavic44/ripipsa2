@@ -13,7 +13,7 @@ function Signup() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post(`https://${NgrokUrl}/api/Usuario`, { username, password });
+            const { data } = await axios.post(`http://${NgrokUrl}/api/Usuario`, { username, password });
             console.log(data+' yo escribi esto con console log')
             if (data === 'Registro creado.') {
 

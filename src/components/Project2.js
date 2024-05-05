@@ -23,7 +23,7 @@ export const Projects2 = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const { data } = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
+                const { data } = await axios.get(`http://${NgrokUrl}/api/user/${userId}`);
                 console.log("UserData:", data); // Verifica si los datos del usuario se están recibiendo correctamente
                 setUserData(data);
             } catch (error) {
@@ -37,7 +37,7 @@ export const Projects2 = () => {
             
             try {
                 
-                const {data} = await(axios.get(`https://${NgrokUrl}/api/userAndProjects/${userId}`));
+                const {data} = await(axios.get(`http://${NgrokUrl}/api/userAndProjects/${userId}`));
                 //const projectsData = responses.map(response => response.data);
                 console.log(data.projects)
 
@@ -57,7 +57,7 @@ export const Projects2 = () => {
     console.log(id_objeto, id_usuario)
         try {
           
-            await axios.delete(`https://${NgrokUrl}/api/EscenaObjeto`, {
+            await axios.delete(`http://${NgrokUrl}/api/EscenaObjeto`, {
                 data: {
                     id_usuario: id_usuario,
                     id_objeto: id_objeto
