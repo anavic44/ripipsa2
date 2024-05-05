@@ -1,13 +1,9 @@
 import React from 'react';
-
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 import { useParams } from 'react-router-dom';
-
-
 import TrackVisibility from 'react-on-screen';
-import ColorSharp2 from "../assets/img/color-sharp2.png";
+//import ColorSharp2 from "../assets/img/color-sharp2.png";
 import { NavBar } from './NavBar';  // Asegúrate de que la ruta es correcta
 import 'animate.css';
 import { ProjectCard } from "./ProjectCard";
@@ -16,7 +12,7 @@ import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
 export const Projects2 = () => {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState([{item:"empty"}]);
     const [userData, setUserData] = useState([]);
     const [selectedValue, setSelectedValue] = useState('');
     const [proyecto, setProyecto] = useState(0);
