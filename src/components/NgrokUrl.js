@@ -1,1 +1,1 @@
-export const NgrokUrl = "185.157.245.175:2023"
+export const NgrokUrl = "18.224.181.212:2023"
