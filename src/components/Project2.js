@@ -12,7 +12,7 @@ import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
 export const Projects2 = () => {
-    const [projects, setProjects] = useState([{item:"empty"}]);
+    const [projects, setProjects] = useState([{Titulo:"loading...", Empresa:"loading...", imgUrl:"loading...", id_objeto:"loading..."}]);
     const [userData, setUserData] = useState([]);
     const [selectedValue, setSelectedValue] = useState('');
     const [proyecto, setProyecto] = useState(0);
