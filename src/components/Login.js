@@ -3,7 +3,7 @@ import '../Login.css';
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from 'js-cookie';
-
+import { NgrokUrl } from "./NgrokUrl";
 
 
 function Login() {
@@ -15,7 +15,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault(); // Previene el comportamiento por defecto del formulario
         try {
-            const { data } = await axios.post('http://localhost:2023/api/validateUser', { username, password });
+            const { data } = await axios.post(`https://${NgrokUrl}/api/validateUser`, { username, password });
             if (data.success) {
                 localStorage.setItem('userData', JSON.stringify(data.userData));
                 //cookie

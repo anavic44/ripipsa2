@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { NgrokUrl } from './NgrokUrl';
 
 function Signup() {
     const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ function Signup() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:2023/api/Usuario', { username, password });
+            const { data } = await axios.post(`https://${NgrokUrl}/api/Usuario`, { username, password });
             console.log(data+' yo escribi esto con console log')
             if (data === 'Registro creado.') {
 

@@ -13,6 +13,7 @@ import 'animate.css';
 import { ProjectCard } from "./ProjectCard";
 import { Link } from 'react-router-dom';
 import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
+import { NgrokUrl } from './NgrokUrl';
 
 export const Projects2 = () => {
     const [projects, setProjects] = useState([]);
@@ -26,7 +27,7 @@ export const Projects2 = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:2023/api/user/${userId}`);
+                const { data } = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
                 console.log("UserData:", data); // Verifica si los datos del usuario se están recibiendo correctamente
                 setUserData(data);
             } catch (error) {
@@ -40,7 +41,7 @@ export const Projects2 = () => {
             
             try {
                 
-                const {data} = await(axios.get(`http://localhost:2023/api/userAndProjects/${userId}`));
+                const {data} = await(axios.get(`https://${NgrokUrl}/api/userAndProjects/${userId}`));
                 //const projectsData = responses.map(response => response.data);
                 console.log(data.projects)
 
@@ -60,7 +61,7 @@ export const Projects2 = () => {
     console.log(id_objeto, id_usuario)
         try {
           
-            await axios.delete(`http://localhost:2023/api/EscenaObjeto`, {
+            await axios.delete(`https://${NgrokUrl}/api/EscenaObjeto`, {
                 data: {
                     id_usuario: id_usuario,
                     id_objeto: id_objeto

@@ -10,7 +10,7 @@ import 'animate.css';
 import { ProjectCard } from "./ProjectCard";
 import { Link } from 'react-router-dom';
 import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
-
+import { NgrokUrl } from './NgrokUrl';
 
 export const RegistrarProyecto = () => {
   const [projects, setProjects] = useState([]);
@@ -23,7 +23,7 @@ export const RegistrarProyecto = () => {
 
     const fetchProyectos = async () => {
       try {
-        const { data } = await axios.get('http://localhost:2023/api/load-all-objects');
+        const { data } = await axios.get(`https://${NgrokUrl}/api/load-all-objects`);
         console.log(data)
         setProjects(data);
       } catch (error) {
@@ -41,7 +41,7 @@ export const RegistrarProyecto = () => {
     try {
       const id_usuario= userId
       const id_objeto= proyecto
-      await axios.post('http://localhost:2023/api/EscenaObjeto', {
+      await axios.post(`https://${NgrokUrl}/api/EscenaObjeto`, {
         id_usuario,
         id_objeto
       });

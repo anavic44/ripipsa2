@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import { ARExperience } from './Experience'; // Asegúrate de importar tu clase ARExperience y la función loadObjects
 import { useParams } from 'react-router-dom';
-
+import { NgrokUrl } from "./NgrokUrl";
 
 const ARComponents = () => {
     
@@ -17,7 +17,7 @@ const ARComponents = () => {
             
             try {
                 //const { data } = await axios.get('http://localhost:2023/api/load-object/1');
-                const { data } = await axios.get(`http://localhost:2023/api/load-object/${id_objeto}`);
+                const { data } = await axios.get(`https://${NgrokUrl}/api/load-object/${id_objeto}`);
                 console.log(data.mtlUrl)
                 setMtlUrl (data.mtlUrl)
                 setObjUrl (data.objUrl)
