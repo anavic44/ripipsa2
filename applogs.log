@@ -1,0 +1,890 @@
+
+> ripipsa@0.1.0 start
+> react-scripts start t 3000
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:2479) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:2479) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/App.js
+  Line 2:27:   'Router' is defined but never used           no-unused-vars
+  Line 7:10:   'deflate' is defined but never used          no-unused-vars
+  Line 16:10:  'userId' is assigned a value but never used  no-unused-vars
+
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Experience.js
+  Line 172:5:  Duplicate name 'render'  no-dupe-class-members
+
+src/components/NavBar.js
+  Line 5:10:  'HashLink' is defined but never used  no-unused-vars
+
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/ProjectCard.js
+  Line 1:10:  'Col' is defined but never used  no-unused-vars
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:27:   'Router' is defined but never used           no-unused-vars
+  Line 7:10:   'deflate' is defined but never used          no-unused-vars
+  Line 16:10:  'userId' is assigned a value but never used  no-unused-vars
+
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Experience.js
+  Line 172:5:  Duplicate name 'render'  no-dupe-class-members
+
+src/components/NavBar.js
+  Line 5:10:  'HashLink' is defined but never used  no-unused-vars
+
+src/components/Project2.js
+  Line 10:8:   'ColorSharp2' is defined but never used                                                                    no-unused-vars
+  Line 14:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 55:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/ProjectCard.js
+  Line 1:10:  'Col' is defined but never used  no-unused-vars
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:2750) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:2750) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3007) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3007) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3366) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3366) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3621) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3621) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3287) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3287) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3558) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3558) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3774) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3774) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+webpack compiled with 2 warnings
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+(node:3227) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node-18 --trace-deprecation ...` to show where the warning was created)
+(node:3227) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/ARComponents.js
+  Line 9:12:   'arExperience' is assigned a value but never used  no-unused-vars
+  Line 10:16:  'error' is assigned a value but never used         no-unused-vars
+
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                    no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                      no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                             no-unused-vars
+  Line 36:6:   React Hook useEffect has a missing dependency: 'proyecto'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 37:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 38:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 38:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 38:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/RegistrarProyecto.js
+  Line 5:10:   'ButtonToolbar' is defined but never used                                                                                     no-unused-vars
+  Line 7:8:    'ColorSharp2' is defined but never used                                                                                       no-unused-vars
+  Line 11:10:  'Link' is defined but never used                                                                                              no-unused-vars
+  Line 38:6:   React Hook useEffect has missing dependencies: 'projects' and 'proyecto'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+[eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+WARNING in [eslint] 
+src/components/Project2.js
+  Line 10:10:  'Link' is defined but never used                                                                           no-unused-vars
+  Line 51:8:   React Hook useEffect has a missing dependency: 'userId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 2 warnings
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> ripipsa@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+Critical dependency: the request of a dependency is an expression
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./node_modules/three/examples/jsm/physics/RapierPhysics.js 25:19-38
+Critical dependency: the request of a dependency is an expression
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.

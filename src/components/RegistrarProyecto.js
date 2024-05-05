@@ -13,7 +13,7 @@ import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
 export const RegistrarProyecto = () => {
-  const [projects, setProjects] = useState([{Titulo:"loading...", Empresa:"loading...", imgUrl:"loading...", id_objeto:"loading..."}]);
+  const [projects, setProjects] = useState([]);
   const [proyecto, setProyecto] = useState(0);
   const { userId } = useParams(); // Asumiendo que hay un parámetro de usuario en la ruta
   const navigate = useNavigate();
@@ -24,8 +24,10 @@ export const RegistrarProyecto = () => {
     const fetchProyectos = async () => {
       try {
         const { data } = await axios.get(`http://${NgrokUrl}/api/load-all-objects`);
-        console.log(data)
-        setProjects(data.projects || []);
+        console.log(data.projects)
+	console.log(data)
+        setProjects(data);
+	console.log(projects)      
       } catch (error) {
         console.log('Error fetching projects', error);
       }

@@ -39,9 +39,9 @@ export const Projects2 = () => {
                 
                 const {data} = await(axios.get(`http://${NgrokUrl}/api/userAndProjects/${userId}`));
                 //const projectsData = responses.map(response => response.data);
-                console.log(data.projects)
+                console.log(data)
 
-                setProjects(data.projects || []);
+                if(data.projects){setProjects(data.projects || []);}
             } catch (error) {
                 console.error("Error fetching project data: ", error);
             }

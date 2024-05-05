@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { NgrokUrl } from './NgrokUrl';
+import  Cookies  from 'js-cookie';
 
 function Signup() {
     const [username, setUsername] = useState('');
@@ -16,8 +17,20 @@ function Signup() {
             const { data } = await axios.post(`http://${NgrokUrl}/api/Usuario`, { username, password });
             console.log(data+' yo escribi esto con console log')
             if (data === 'Registro creado.') {
-
-                navigate('/projects/:userId');
+		 try {
+            		const { data } = await axios.post(`http://${NgrokUrl}/api/validateUser`, { username, password });
+            		if (data.success) {
+                		localStorage.setItem('userData', JSON.stringify(data.userData));
+                		//cookie
+                		Cookies.set('user_id', data.userData.id);
+                		navigate(`/projects/${data.userData.id}`);
+                 		// Redirección a la página de inicio solo si la autenticación es exitosa
+            		} else {
+                		setError(data.message || 'Error de autenticación'); // Mostrar mensaje de error si la autenticación falla
+            			}
+        	} catch (error) {
+            		setError('No se pudo conectar con el servidor'); // Manejo de error de conexión
+        			}
             } else {
                 setError(data.message || 'Se ha registrado el usuario');
             }
