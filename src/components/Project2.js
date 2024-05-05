@@ -41,7 +41,7 @@ export const Projects2 = () => {
                 //const projectsData = responses.map(response => response.data);
                 console.log(data.projects)
 
-                setProjects(data.projects);
+                setProjects(data.projects || []);
             } catch (error) {
                 console.error("Error fetching project data: ", error);
             }
@@ -90,10 +90,13 @@ export const Projects2 = () => {
                         <TrackVisibility>
                         {({ isVisible }) => (
                         <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-                            {userData ? (<><h2>Proyectos de {userData.username}</h2>
-                            <p>Los proyectos disponibles para tu usuario son:</p>
-                            </>):("")
-                            }
+                          {userData && userData.username ? (
+                            <>
+                                <h2>Proyectos de {userData.username}</h2>
+                                <p>Los proyectos disponibles para tu usuario son:</p>
+                            </>
+                            ) : null}
+
                             <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                     <Nav.Item>
