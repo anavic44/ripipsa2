@@ -41,6 +41,10 @@ const NotasPage = () => {
     }
   };
   
+  const handleupdateChanges = (e, id) => {
+    setNotes(notes.map((note) => (note.id_nota === id ? { ...note, contenido: e.target.value } : note)));
+        setNotaseditadas(e.target.value)
+  }
 
   // Agregar un nuevo estado para manejar el mensaje de error
   const [errorMessage, setErrorMessage] = useState('');
@@ -123,7 +127,7 @@ const NotasPage = () => {
                   rows='3'
                   cols='30'
                   value={note.contenido}
-                  onChange={(e) =>  setNotaseditadas(e.target.value)}
+                  onChange={(e) =>  handleupdateChanges(e, note.id_nota)}
                 ></textarea>
                 
                 <div className='note-footer'>
