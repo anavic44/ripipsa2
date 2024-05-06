@@ -23,7 +23,7 @@ export const RegistrarProyecto = () => {
 
     const fetchProyectos = async () => {
       try {
-        const { data } = await axios.get(`http://${NgrokUrl}/api/load-all-objects`);
+        const { data } = await axios.get(`https://${NgrokUrl}/api/load-all-objects`);
         console.log(data.projects)
 	console.log(data)
         setProjects(data);
@@ -43,7 +43,7 @@ export const RegistrarProyecto = () => {
     try {
       const id_usuario= userId
       const id_objeto= proyecto
-      await axios.post(`http://${NgrokUrl}/api/EscenaObjeto`, {
+      await axios.post(`https://${NgrokUrl}/api/EscenaObjeto`, {
         id_usuario,
         id_objeto
       });
