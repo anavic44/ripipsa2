@@ -8,8 +8,6 @@ import { ProjectCard } from "./ProjectCard";
 import { Col, Container, Tab, Row, Nav, Form } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
-handleSceneSelection
-
 export const Projects2 = () => {
     const [projects, setProjects] = useState([]);
     const [userData, setUserData] = useState(null);
