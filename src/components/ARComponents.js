@@ -4,7 +4,7 @@ import axios from 'axios';
 import { ARExperience } from './Experience';
 import { NgrokUrl } from './NgrokUrl';
 
-const ARComponents = () => {
+const ARComponents = ({idEscena}) => {
     const [modelDetails, setModelDetails] = useState([]);
     const [arExperience, setARExperience] = useState(null);
     const { id_escena } = useParams();  // Assumes `id_escena` is part of the URL parameter
@@ -26,9 +26,8 @@ const ARComponents = () => {
                 setError('No se pudo conectar con el servidor');
             }
         };
-
         fetchModelDetails();
-    }, [id_escena]);
+    }, [idEscena]);
 
     // Initialize or reinitialize ARExperience when modelDetails change
     useEffect(() => {
