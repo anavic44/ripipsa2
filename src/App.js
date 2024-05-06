@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { NavBar } from './components/NavBar.js';
 import { RegistrarProyecto } from './components/RegistrarProyecto.js';
-import { NotasPage} from './components/NotasPage.js';
+import  NotasPage from './components/NotasPage.js';
 
 
 
