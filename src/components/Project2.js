@@ -22,23 +22,33 @@ export const Projects2 = () => {
         const fetchData = async () => {
             try {
                 const userResponse = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
-                setUserData(userResponse.data);
+                if (userResponse.data) {
+                    setUserData(userResponse.data);
+                }
 
                 const scenesResponse = await axios.get(`https://${NgrokUrl}/api/Escena/${userId}`);
-                setScenes(scenesResponse.data);
+                if (Array.isArray(scenesResponse.data)) {
+                    setScenes(scenesResponse.data);
+                } else {
+                    console.error("Received non-array scenes data");
+                }
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
         fetchData();
-    }, [userId, update]);
+    }, [userId]);
 
     useEffect(() => {
         if (selectedScene) {
             const fetchProjects = async () => {
                 try {
-                    const { data } = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${selectedScene}`);
-                    setProjects(data.projects || []);
+                    const response = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${selectedScene}`);
+                    if (Array.isArray(response.data.projects)) {
+                        setProjects(response.data.projects);
+                    } else {
+                        console.error("Received non-array projects data");
+                    }
                 } catch (error) {
                     console.error("Error fetching project data:", error);
                 }
@@ -50,6 +60,7 @@ export const Projects2 = () => {
     const handleSceneSelection = (e) => {
         setSelectedScene(e.target.value);
     };
+
     return (
         <div>
             <NavBar />
