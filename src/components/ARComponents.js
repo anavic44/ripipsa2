@@ -42,7 +42,7 @@ const ARComponents = () => {
     }, [modelDetails]);
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <div>Errores: {error}</div>;
     }
 
     return (
