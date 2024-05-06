@@ -10,8 +10,6 @@ import './App.css'
 import { NavBar } from './components/NavBar.js';
 import { NavBar2 } from './components/NavBar2.js';
 import { RegistrarProyecto } from './components/RegistrarProyecto.js';
-import NotasPage from './components/NotasPage.js';
-
 
 
 
@@ -43,3 +41,4 @@ function App() {
 }
 
 export default App;
+
