@@ -8,7 +8,10 @@ import { deflate } from 'three/examples/jsm/libs/fflate.module.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { NavBar } from './components/NavBar.js';
+import { NavBar2 } from './components/NavBar2.js';
 import { RegistrarProyecto } from './components/RegistrarProyecto.js';
+import NotasPage from './components/NotasPage.js';
+
 
 
 
@@ -32,6 +35,7 @@ function App() {
         <Route path="/ar/:id_objeto" element={<ARComponents />}></Route>
         <Route path='/projects/:userId' element={<Projects2 />} />
         <Route path='/registrar-proyecto/:userId' element={<RegistrarProyecto />} />
+        <Route path="/api/notas/:id_objeto" element={<NotasPage />} />
 
       </Routes>
     </BrowserRouter>
@@ -39,4 +43,3 @@ function App() {
 }
 
 export default App;
-
