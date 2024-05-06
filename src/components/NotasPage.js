@@ -121,7 +121,7 @@ const NotasPage = () => {
                 <textarea
                   rows='3'
                   cols='30'
-                  value={notasEditadas}
+                  value={note.contenido + notasEditadas}
                   onChange={(e) =>  setNotaseditadas(e.target.value)}
                 ></textarea>
                 <button onClick={handleUpdateNote(note.id_nota)}>Guardar cambios</button>
