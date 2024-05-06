@@ -122,7 +122,7 @@ const NotasPage = () => {
                 <textarea
                   rows='3'
                   cols='30'
-                  value={notasEditadas}
+                  value={note.contenido}
                   onChange={(e) =>  setNotaseditadas(e.target.value)}
                 ></textarea>
                 
