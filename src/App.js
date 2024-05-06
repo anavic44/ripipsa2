@@ -12,7 +12,6 @@ import { NavBar2 } from './components/NavBar2.js';
 import { RegistrarProyecto } from './components/RegistrarProyecto.js';
 import NotasPage from './components/NotasPage.js';
 
-import { RegistrarProyecto } from './components/RegistrarProyecto.js';
 
 
 
