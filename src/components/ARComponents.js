@@ -13,10 +13,13 @@ const ARComponents = () => {
     useEffect(() => {
         const fetchModelDetails = async () => {
             try {
-                // Asegúrate de que la URL es correcta y completa
-                const response = await axios.get(`https://api-ar.vercel.app/api/EscenaObjeto?id_escena=${sceneId}`);
+                const response = await axios.get(`https://${NgrokUrl}/api/EscenaObjeto?id_escena=${sceneId}`);
                 if (Array.isArray(response.data)) {
-                    setModelDetails(response.data);
+                    const formattedDetails = response.data.map(item => ({
+                        objPath: item.objUrl,
+                        mtlPath: item.mtlUrl
+                    }));
+                    setModelDetails(formattedDetails);
                 } else {
                     throw new Error("Data is not an array");
                 }
@@ -27,7 +30,7 @@ const ARComponents = () => {
         };
         fetchModelDetails();
     }, [sceneId]);
-
+    
     useEffect(() => {
         if (modelDetails.length > 0 && !arExperience) {
             const experience = new ARExperience(modelDetails);
