@@ -47,7 +47,7 @@ export const Projects2 = () => {
         }
     }, [selectedScene]);
 
-    const handleSceneChange = (e) => {
+    const handleSceneSelection = (e) => {
         setSelectedScene(e.target.value);
     };
     return (
