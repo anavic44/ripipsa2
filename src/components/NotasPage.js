@@ -16,7 +16,7 @@ const NotasPage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await axios.get(`http://${NgrokUrl}/api/notas/${id_objeto}`); // Cambiar id_escena por id_objeto
+        const response = await axios.get(`https://${NgrokUrl}/api/notas/${id_objeto}`); // Cambiar id_escena por id_objeto
         setNotes(response.data);
       } catch (error) {
         console.error('Error fetching notes:', error);
@@ -32,7 +32,7 @@ const NotasPage = () => {
 
   const fetchUserIdFromSceneId = async (id_objeto) => { // Update function parameter name
     try {
-      const response = await axios.get(`http://${NgrokUrl}/api/userAndProjects2/${id_objeto}`);
+      const response = await axios.get(`https://${NgrokUrl}/api/userAndProjects2/${id_objeto}`);
       return response.data.userId;
     } catch (error) {
       console.error('Error fetching user id:', error);
@@ -50,7 +50,7 @@ const NotasPage = () => {
       const id_usuario = await fetchUserIdFromSceneId(id_objeto);
       if (id_usuario !== null) {
         try {
-          const response = await axios.post(`http://${NgrokUrl}/api/notas`, {
+          const response = await axios.post(`https://${NgrokUrl}/api/notas`, {
             id_objeto: id_objeto,
             contenido: noteText
           });
@@ -84,7 +84,7 @@ const NotasPage = () => {
 
   const handleUpdateNote = async (id, newContent) => {
     try {
-      const response = await axios.put(`http://${NgrokUrl}/api/notas/${id}`, {
+      const response = await axios.put(`https://${NgrokUrl}/api/notas/${id}`, {
         contenido: newContent
       });
       if (response.status === 200) {
@@ -99,7 +99,7 @@ const NotasPage = () => {
 
   const handleDeleteNote = async (id) => {
     try {
-      await axios.delete(`http://${NgrokUrl}/api/notas/${id}`);
+      await axios.delete(`https://${NgrokUrl}/api/notas/${id}`);
       setNotes(notes.filter((note) => note.id_nota !== id));
     } catch (error) {
       console.error('Error deleting note:', error);
