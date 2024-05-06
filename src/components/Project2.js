@@ -8,6 +8,8 @@ import { ProjectCard } from "./ProjectCard";
 import { Col, Container, Tab, Row, Nav, Form } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
+handleSceneSelection
+
 export const Projects2 = () => {
     const [projects, setProjects] = useState([]);
     const [userData, setUserData] = useState(null);
@@ -44,59 +46,38 @@ export const Projects2 = () => {
 
         fetchData();
     }, [userId]);
-
-
     return (
         <div>
             <NavBar />
-            <section className="Project" id="projects">
-                <Container>
-                    <Row>
-                        <Col size={12}>
-                            <TrackVisibility>
-                                {({ isVisible }) => (
-                                    <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-                                        {userData && userData.username ? (
-                                            <>
-                                                <h2>Proyectos de {userData.username}</h2>
-                                                <p>Selecciona una escena para cargar los proyectos correspondientes:</p>
-                                                <Form>
-                                                    <Form.Group controlId="sceneSelection">
-                                                        <Form.Label>Escena</Form.Label>
-                                                        <Form.Control as="select" value={selectedScene} onChange={handleSceneSelection}>
-                                                            {scenes.map((scene) => <option key={scene.id} value={scene.id}>{scene.title}</option>)}
-                                                        </Form.Control>
-                                                    </Form.Group>
-                                                </Form>
-                                            </>
-                                        ) : "Cargando..."}
-                                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                                <Nav.Item>
-                                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                                                </Nav.Item>
-                                                <Nav.Item>
-                                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                                                </Nav.Item>
-                                                <Nav.Item>
-                                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                                                </Nav.Item>
-                                            </Nav>
-                                            <Tab.Content>
-                                                {projects.map((project, index) => (
-                                                    <Tab.Pane eventKey={`tab-${index}`}>
-                                                        <ProjectCard key={project.id_objeto} {...project} />
-                                                    </Tab.Pane>
-                                                ))}
-                                            </Tab.Content>
-                                        </Tab.Container>
-                                    </div>
-                                )}
-                            </TrackVisibility>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+            <Container className="Project">
+                {userData && (
+                    <>
+                        <h2>Proyectos de {userData.username}</h2>
+                        <p>Selecciona una escena para ver detalles específicos:</p>
+                        <Form>
+                            <Form.Group controlId="sceneSelection">
+                                <Form.Label>Escena</Form.Label>
+                                <Form.Control as="select" onChange={(e) => console.log('Scene selected:', e.target.value)}>
+                                    {scenes.map(scene => <option key={scene.id} value={scene.id}>{scene.title}</option>)}
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
+                    </>
+                )}
+                <TrackVisibility>
+                    {({ isVisible }) => (
+                        <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
+                            <Row>
+                                {projects.map((project, index) => (
+                                    <Col key={index} xs={12} sm={6} md={4}>
+                                        <ProjectCard {...project} />
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
+                    )}
+                </TrackVisibility>
+            </Container>
         </div>
     );
 };
