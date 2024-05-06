@@ -1,67 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { ARExperience } from './Experience';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { NgrokUrl } from "./NgrokUrl";
+import { ARExperience } from './Experience';
+import { NgrokUrl } from './NgrokUrl';
 
 const ARComponents = () => {
+    const [modelDetails, setModelDetails] = useState([]);
     const [arExperience, setARExperience] = useState(null);
-        const [error, setError] = useState('');
-        const [mtlUrl,setMtlUrl] = useState('');
-        const [objUrl,setObjUrl] = useState('');
-        const {id_objeto} = useParams();
-        const [idUsuario, setIdUsuario] = useState(null);
-       
-    
-        const handleObjeto = async () => {
-            
+    const { id_escena } = useParams();  // Assumes `id_escena` is part of the URL parameter
+    const [error, setError] = useState('');
+
+    // Fetch model details based on scene (EscenaObjeto)
+    useEffect(() => {
+        const fetchModelDetails = async () => {
             try {
-                //const { data } = await axios.get('http://localhost:2023/api/load-object/1');
-                const { data } = await axios.get(`https://${NgrokUrl}/api/load-object/${id_objeto}`);
-                console.log(data.mtlUrl)
-                setMtlUrl (data.mtlUrl)
-                setObjUrl (data.objUrl)
-                const userId = await fetchUserIdFromSceneId(id_objeto);
-            setIdUsuario(userId);
+                const response = await axios.get(`https://${NgrokUrl}/api/EscenaObjeto?id_escena=${id_escena}`);
+                const { data } = response;
+                setModelDetails(data.map(item => ({
+                    objPath: item.objUrl,
+                    mtlPath: item.mtlUrl,
+                    userId: item.id_usuario,  // Keeping user ID in the model detail
+                })));
             } catch (error) {
+                console.error('Error fetching model details:', error);
                 setError('No se pudo conectar con el servidor');
             }
         };
-        useEffect (() =>{
-            handleObjeto()
-        });
-        const fetchUserIdFromSceneId = async (id_objeto) => {
-            try {
-                const response = await axios.get(`http://${NgrokUrl}/api/userAndProjects2/${id_objeto}`);
-                return response.data.userId;
-            } catch (error) {
-                console.error('Error fetching user id:', error);
-                return null;
-            }
-        };
 
+        fetchModelDetails();
+    }, [id_escena]);
 
-    const handleClickLoadModel = async () => {
-        try {
-            const experience = new ARExperience();
-            await experience.loadModel(mtlUrl, objUrl);
-            setARExperience(experience);
+    // Initialize or reinitialize ARExperience when modelDetails change
+    useEffect(() => {
+        if (modelDetails.length > 0 && !arExperience) {
+            const experience = new ARExperience(modelDetails);
             experience.initScene();
             experience.setupARExperience();
-        } catch (error) {
-            console.error("Error al cargar el modelo:", error);
+            setARExperience(experience);
+
+            // Cleanup function to handle component unmount
+            return () => {
+                experience.cleanUp();
+            };
         }
-    };
+    }, [modelDetails]);
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <div className="container3D" style={{ width: "100%", height: "100vh" }}>
-            <button onClick ={() => handleClickLoadModel()} className="botonAR">Cargar Modelo</button> 
-            <Link to={`/api/notas/${id_objeto}`} className="notas-button">Notas del proyecto</Link>
-            {idUsuario !== null && (
-            <Link to={`/projects/${idUsuario}`} className="return-button">Volver al inicio</Link>
-            )}
-           
-            
+            {modelDetails.map((detail, index) => (
+                <button key={index} onClick={() => arExperience.setActiveObject(index)}>
+                    Load Model {index + 1}
+                </button>
+            ))}
+            <Link to={`/api/notas/${id_escena}`} className="notas-button">Notas del proyecto</Link>
         </div>
     );
 };
