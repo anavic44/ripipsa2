@@ -30,7 +30,7 @@ const ARComponents = () => {
         };
         fetchModelDetails();
     }, [sceneId]);
-    
+
     useEffect(() => {
         if (modelDetails.length > 0 && !arExperience) {
             const experience = new ARExperience(modelDetails);
@@ -52,7 +52,7 @@ const ARComponents = () => {
                     Load Model {index + 1}
                 </button>
             ))}
-            <Link to={`/notes/${sceneId}`} className="notes-button">Project Notes</Link>
+            <Link to={`/notas/${sceneId}`} className="notes-button">Project Notes</Link>
         </div>
     );
 };
