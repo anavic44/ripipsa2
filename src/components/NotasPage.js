@@ -90,6 +90,7 @@ const NotasPage = () => {
       });
       if (response.status === 200) {
         setNotes(notes.map((note) => (note.id_nota === id ? { ...note, contenido: notasEditadas } : note)));
+        setNotaseditadas('')
       } else {
         console.error('Failed to update note:', response.statusText);
       }
