@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MdDeleteForever } from 'react-icons/md';
+import { MdDeleteForever, MdEdit } from 'react-icons/md';
 import '../NotasPage.css';
 import { Link, useParams } from 'react-router-dom';
 import { NavBar2 } from './NavBar2';
@@ -11,7 +11,7 @@ const NotasPage = () => {
   const [noteText, setNoteText] = useState('');
   const { id_objeto } = useParams(); // Cambiar id_escena por id_objeto
   const [notasEditadas, setNotaseditadas] = useState('');
-
+  const [update, setUpdate] = useState(false);
 
   
   useEffect(() => {
@@ -25,7 +25,7 @@ const NotasPage = () => {
     };
 
     fetchNotes();
-  }, [id_objeto]); // Cambiar id_escena por id_objeto
+  }, [id_objeto, update]); // Cambiar id_escena por id_objeto
 
   const handleChange = (event) => {
     setNoteText(event.target.value);
@@ -63,6 +63,7 @@ const NotasPage = () => {
           if (response.status === 201) {
             // Add the newly created note to the local state
             setNotes([...notes, response.data]);
+            setUpdate(!update);
             // Clear the note text only if a new note is being created
             setNoteText('');
             // Clear the error message if the note is added successfully
@@ -132,7 +133,7 @@ const NotasPage = () => {
                 
                 <div className='note-footer'>
                   <small>{note.fecha}</small>
-                  <MdDeleteForever
+                  <MdEdit
                     onClick={() => handleUpdateNote(note.id_nota)}
                     className='edit-icon'
                     size='1.3em'
