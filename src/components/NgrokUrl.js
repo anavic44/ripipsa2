@@ -1,1 +1,1 @@
-export const NgrokUrl = "185.157.245.175:2023"
+export const NgrokUrl = "api-ar.vercel.app"
