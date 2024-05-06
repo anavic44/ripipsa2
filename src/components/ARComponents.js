@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ARExperience } from './Experience';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { ARExperience } from './Experience'; // Asegúrate de importar tu clase ARExperience y la función loadObjects
 import { useParams } from 'react-router-dom';
 import { NgrokUrl } from "./NgrokUrl";
 
