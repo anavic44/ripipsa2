@@ -9,7 +9,7 @@ import { NgrokUrl } from "./NgrokUrl";
 const NotasPage = () => {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState('');
-  const { id_objeto } = useParams(); // Cambiar id_escena por id_objeto
+  const { id_escena } = useParams(); 
   const [notasEditadas, setNotaseditadas] = useState('');
   const [update, setUpdate] = useState(false);
 
@@ -17,7 +17,7 @@ const NotasPage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await axios.get(`https://${NgrokUrl}/api/notas/${id_objeto}`); // Cambiar id_escena por id_objeto
+        const response = await axios.get(`https://${NgrokUrl}/api/notas/${id_escena}`);
         setNotes(response.data);
       } catch (error) {
         console.error('Error fetching notes:', error);
@@ -25,15 +25,15 @@ const NotasPage = () => {
     };
 
     fetchNotes();
-  }, [id_objeto, update]); // Cambiar id_escena por id_objeto
+  }, [id_escena, update]); 
 
   const handleChange = (event) => {
     setNoteText(event.target.value);
   };
 
-  const fetchUserIdFromSceneId = async (id_objeto) => { // Update function parameter name
+  const fetchUserIdFromSceneId = async (id_escena) => { // Update function parameter name
     try {
-      const response = await axios.get(`https://${NgrokUrl}/api/userAndProjects2/${id_objeto}`);
+      const response = await axios.get(`https://${NgrokUrl}/api/userAndProjects2/${id_escena}`);
       return response.data.userId;
     } catch (error) {
       console.error('Error fetching user id:', error);
@@ -52,11 +52,11 @@ const NotasPage = () => {
   // Dentro de handleAddNote, mostrar un mensaje de error si no se puede obtener el id_usuario
   const handleAddNote = async () => {
     if (noteText.trim().length > 0) {
-      const id_usuario = await fetchUserIdFromSceneId(id_objeto);
+      const id_usuario = await fetchUserIdFromSceneId(id_escena);
       if (id_usuario !== null) {
         try {
           const response = await axios.post(`https://${NgrokUrl}/api/notas`, {
-            id_objeto: id_objeto,
+            id_escena: id_escena,
             contenido: noteText
           });
   
@@ -79,7 +79,7 @@ const NotasPage = () => {
           setErrorMessage('Error adding note. Please try again later.');
         }
       } else {
-        console.error('Could not fetch user ID for scene:', id_objeto);
+        console.error('Could not fetch user ID for scene:', id_escena);
         // Show an error message to the user
         setErrorMessage('Could not fetch user ID for this scene.');
       }

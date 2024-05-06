@@ -33,7 +33,7 @@ function App() {
         <Route path="/ar/:sceneId" element={<ARComponents />}></Route>
         <Route path='/projects/:userId' element={<Projects2 />} />
         <Route path='/registrar-proyecto/:userId' element={<RegistrarProyecto />} />
-        <Route path="/api/notas/:id_objeto" element={<NotasPage />} />
+        <Route path="/api/notas/:sceneId" element={<NotasPage />} />
 
       </Routes>
     </BrowserRouter>
