@@ -8,8 +8,8 @@ import { deflate } from 'three/examples/jsm/libs/fflate.module.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { NavBar } from './components/NavBar.js';
-import { NavBar2 } from './components/NavBar2.js';
 import { RegistrarProyecto } from './components/RegistrarProyecto.js';
+import { NotasPage} from './components/NotasPage.js';
 
 
 
