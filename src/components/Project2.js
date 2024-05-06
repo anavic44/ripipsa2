@@ -1,16 +1,113 @@
-import React from 'react';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import TrackVisibility from 'react-on-screen';
-//import ColorSharp2 from "../assets/img/color-sharp2.png";
-import { NavBar } from './NavBar';  // Asegúrate de que la ruta es correcta
+import { NavBar } from './NavBar';
 import 'animate.css';
 import { ProjectCard } from "./ProjectCard";
-import { Link } from 'react-router-dom';
-import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
+import { Col, Container, Tab, Row, Nav, Form } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
+export const Projects2 = () => {
+    const [projects, setProjects] = useState([{Titulo:"loading...", Empresa:"loading...", imgUrl:"loading...", id_objeto:"loading..."}]);
+    const [userData, setUserData] = useState([]);
+    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedScene, setSelectedScene] = useState(null);
+    const [scenes, setScenes] = useState([]);
+    const [proyecto, setProyecto] = useState(0);
+    const [update, setUpdate] = useState(false);
+    const { userId } = useParams();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userResponse = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
+                setUserData(userResponse.data);
+
+                const scenesResponse = await axios.get(`https://${NgrokUrl}/api/Escena/${userId}`);
+                setScenes(scenesResponse.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, [userId, update]);
+
+    useEffect(() => {
+        if (selectedScene) {
+            const fetchProjects = async () => {
+                try {
+                    const { data } = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${selectedScene}`);
+                    setProjects(data.projects || []);
+                } catch (error) {
+                    console.error("Error fetching project data:", error);
+                }
+            };
+            fetchProjects();
+        }
+    }, [selectedScene]);
+
+    const handleSceneChange = (e) => {
+        setSelectedScene(e.target.value);
+    };
+    return (
+        <div>
+            <NavBar />
+            <section className="Project" id="projects">
+                <Container>
+                    <Row>
+                        <Col size={12}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
+                                        {userData && userData.username ? (
+                                            <>
+                                                <h2>Proyectos de {userData.username}</h2>
+                                                <p>Selecciona una escena para cargar los proyectos correspondientes:</p>
+                                                <Form>
+                                                    <Form.Group controlId="sceneSelection">
+                                                        <Form.Label>Escena</Form.Label>
+                                                        <Form.Control as="select" value={selectedScene} onChange={handleSceneSelection}>
+                                                            {scenes.map((scene) => <option key={scene.id} value={scene.id}>{scene.title}</option>)}
+                                                        </Form.Control>
+                                                    </Form.Group>
+                                                </Form>
+                                            </>
+                                        ) : "Cargando..."}
+                                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                                </Nav.Item>
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                                </Nav.Item>
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                                </Nav.Item>
+                                            </Nav>
+                                            <Tab.Content>
+                                                {projects.map((project, index) => (
+                                                    <Tab.Pane eventKey={`tab-${index}`}>
+                                                        <ProjectCard key={project.id_objeto} {...project} />
+                                                    </Tab.Pane>
+                                                ))}
+                                            </Tab.Content>
+                                        </Tab.Container>
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+        </div>
+    );
+};
+
+
+
+/*
 export const Projects2 = () => {
     const [projects, setProjects] = useState([{Titulo:"loading...", Empresa:"loading...", imgUrl:"loading...", id_objeto:"loading..."}]);
     const [userData, setUserData] = useState([]);
@@ -82,7 +179,7 @@ export const Projects2 = () => {
 
     return (
         <div>
-            <NavBar />  {/* Incorpora el NavBar al layout */}
+            <NavBar />  {/* Incorpora el NavBar al layout }
             <section className="Project" id="projects">
                 <Container>
                     <Row>
@@ -156,8 +253,9 @@ export const Projects2 = () => {
                         </Col>
                     </Row>
                 </Container>
-                {/* <img className="background-image-right" src={ColorSharp2} alt="Decorative"></img> */}
+                {/* <img className="background-image-right" src={ColorSharp2} alt="Decorative"></img> }
             </section>
         </div>
     );
 };
+*/
