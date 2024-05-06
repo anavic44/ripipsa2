@@ -4,6 +4,62 @@ import axios from 'axios';
 import { ARExperience } from './Experience';
 import { NgrokUrl } from './NgrokUrl';
 
+const ARComponents = () => {
+    const [modelDetails, setModelDetails] = useState([]);
+    const [arExperience, setARExperience] = useState(null);
+    const { sceneId } = useParams();
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const fetchModelDetails = async () => {
+            try {
+                const response = await axios.get(`https://${NgrokUrl}/api/EscenaObjeto?id_escena=${sceneId}`);
+                setModelDetails(response.data);
+            } catch (error) {
+                console.error('Error fetching model details:', error);
+                setError('Failed to connect to the server');
+            }
+        };
+        fetchModelDetails();
+    }, [sceneId]);
+
+    useEffect(() => {
+        if (modelDetails.length > 0) {
+            const experience = new ARExperience(modelDetails);
+            experience.initScene();
+            experience.setupARExperience();
+            setARExperience(experience);
+            return () => experience.cleanUp();
+        }
+    }, [modelDetails]);
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    return (
+        <div className="container3D" style={{ width: "100%", height: "100vh" }}>
+            {modelDetails.map((detail, index) => (
+                <button key={index} onClick={() => arExperience.setActiveObject(index)}>
+                    Load Model {index + 1}
+                </button>
+            ))}
+            <Link to={`/notes/${sceneId}`} className="notes-button">Project Notes</Link>
+        </div>
+    );
+};
+
+export default ARComponents;
+
+
+
+/*
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+import { ARExperience } from './Experience';
+import { NgrokUrl } from './NgrokUrl';
+
 const ARComponents = ({idEscena}) => {
     const [modelDetails, setModelDetails] = useState([]);
     const [arExperience, setARExperience] = useState(null);
@@ -61,3 +117,4 @@ const ARComponents = ({idEscena}) => {
 };
 
 export default ARComponents;
+*/
