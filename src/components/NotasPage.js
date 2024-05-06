@@ -129,7 +129,7 @@ const NotasPage = () => {
                   rows='3'
                   cols='30'
                   value={note.contenido}
-                  onChange={(e) =>  handleupdateChanges(e, note.id_nota)}
+                  onChange={(e) =>  handleChange(e, note.id_nota)}
                 ></textarea>
                 
                 <div className='note-footer'>
