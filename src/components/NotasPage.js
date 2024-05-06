@@ -165,7 +165,7 @@ const NotasPage = () => {
           </div>
         </div>
       </div>
-      <Link to={`/ar/${id_objeto}`} className="notas-button">Back to AR page</Link>
+      <Link to={`/ar/${id_escena}`} className="notas-button">Back to AR page</Link>
     </div>
   );
 }
