@@ -6,12 +6,12 @@ body {
   }
   
   .notes-page {
-    padding: 30px;
+    padding: 20px;
   }
   
   .notes-list {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
   
@@ -24,7 +24,7 @@ body {
   .note {
     background-color: #08f; /* Cambia el color de fondo a #08f */
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1rem;
     min-height: 170px;
     display: flex;
     flex-direction: column;
