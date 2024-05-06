@@ -28,7 +28,7 @@ const NotasPage = () => {
   }, [id_objeto, notes]); // Cambiar id_escena por id_objeto
 
   const handleChange = (event) => {
-    setNotaseditadas(event.target.value);
+    setNoteText(event.target.value);
   };
 
   const fetchUserIdFromSceneId = async (id_objeto) => { // Update function parameter name
@@ -124,9 +124,14 @@ const NotasPage = () => {
                   value={note.contenido + notasEditadas}
                   onChange={(e) =>  setNotaseditadas(e.target.value)}
                 ></textarea>
-                <button onClick={handleUpdateNote(note.id_nota)}>Guardar cambios</button>
+                
                 <div className='note-footer'>
                   <small>{note.fecha}</small>
+                  <MdDeleteForever
+                    onClick={() => handleUpdateNote(note.id_nota)}
+                    className='edit-icon'
+                    size='1.3em'
+                  />
                   <MdDeleteForever
                     onClick={() => handleDeleteNote(note.id_nota)}
                     className='delete-icon'
