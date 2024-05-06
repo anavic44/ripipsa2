@@ -28,7 +28,7 @@ const NotasPage = () => {
   }, [id_objeto, notes]); // Cambiar id_escena por id_objeto
 
   const handleChange = (event) => {
-    setNoteText(event.target.value);
+    setNotaseditadas(event.target.value);
   };
 
   const fetchUserIdFromSceneId = async (id_objeto) => { // Update function parameter name
