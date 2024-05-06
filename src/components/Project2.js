@@ -9,57 +9,42 @@ import { Col, Container, Tab, Row, Nav, Form } from "react-bootstrap";
 import { NgrokUrl } from './NgrokUrl';
 
 export const Projects2 = () => {
-    const [projects, setProjects] = useState([{Titulo:"loading...", Empresa:"loading...", imgUrl:"loading...", id_objeto:"loading..."}]);
-    const [userData, setUserData] = useState([]);
-    const [selectedValue, setSelectedValue] = useState('');
-    const [selectedScene, setSelectedScene] = useState(null);
+    const [projects, setProjects] = useState([]);
+    const [userData, setUserData] = useState(null);
     const [scenes, setScenes] = useState([]);
-    const [proyecto, setProyecto] = useState(0);
-    const [update, setUpdate] = useState(false);
     const { userId } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
+            if (!userId) return; // Ensure userId is present
             try {
+                // Fetch user data and scenes
                 const userResponse = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
                 if (userResponse.data) {
                     setUserData(userResponse.data);
                 }
-
+                // Fetch scenes for the user
                 const scenesResponse = await axios.get(`https://${NgrokUrl}/api/Escena/${userId}`);
                 if (Array.isArray(scenesResponse.data)) {
                     setScenes(scenesResponse.data);
                 } else {
                     console.error("Received non-array scenes data");
                 }
+                // Fetch all projects for the user directly without waiting for scene selection
+                const projectsResponse = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${userId}`);
+                if (Array.isArray(projectsResponse.data.projects)) {
+                    setProjects(projectsResponse.data.projects);
+                } else {
+                    console.error("Received non-array projects data");
+                }
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
+
         fetchData();
     }, [userId]);
 
-    useEffect(() => {
-        if (selectedScene) {
-            const fetchProjects = async () => {
-                try {
-                    const response = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${selectedScene}`);
-                    if (Array.isArray(response.data.projects)) {
-                        setProjects(response.data.projects);
-                    } else {
-                        console.error("Received non-array projects data");
-                    }
-                } catch (error) {
-                    console.error("Error fetching project data:", error);
-                }
-            };
-            fetchProjects();
-        }
-    }, [selectedScene]);
-
-    const handleSceneSelection = (e) => {
-        setSelectedScene(e.target.value);
-    };
 
     return (
         <div>
