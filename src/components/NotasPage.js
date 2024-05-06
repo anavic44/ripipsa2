@@ -25,7 +25,7 @@ const NotasPage = () => {
     };
 
     fetchNotes();
-  }, [id_objeto, notes]); // Cambiar id_escena por id_objeto
+  }, [id_objeto]); // Cambiar id_escena por id_objeto
 
   const handleChange = (event) => {
     setNoteText(event.target.value);
