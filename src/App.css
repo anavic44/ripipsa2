@@ -304,6 +304,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
+.notas-button {
+  width: 30%;
+  padding: 1rem;
+  border: 1px solid #131313; /* Borde delgado de color #131313 */
+  border-radius: 10px;
+  background-color: #08f; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  top: 40px;
+  transition: background-color 0.3s
+  
+}
+
+.return-button {
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid #131313;
+  border-radius: 10px;
+  background-color: #08f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  position: fixed;
+  top: 9.1%; /* Adjust the vertical position relative to the viewport height */
+  right: 0%; /* Adjust the horizontal position relative to the viewport width */
+  transition: background-color 0.3s;
+}
+
 .nav-link#projects-tabs-tab-first {
   border: 1px solid #FFFFFF; /* Adds a white border around each tab */
   border-radius: 55px 0px 0px 55px;

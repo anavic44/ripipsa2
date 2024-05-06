@@ -32,7 +32,7 @@ const ARComponents = () => {
         });
         const fetchUserIdFromSceneId = async (id_objeto) => {
             try {
-                const response = await axios.get(`http://localhost:2023/api/userAndProjects2/${id_objeto}`);
+                const response = await axios.get(`http://${NgrokUrl}/api/userAndProjects2/${id_objeto}`);
                 return response.data.userId;
             } catch (error) {
                 console.error('Error fetching user id:', error);
@@ -58,7 +58,7 @@ const ARComponents = () => {
             <button onClick ={() => handleClickLoadModel()} className="botonAR">Cargar Modelo</button> 
             <Link to={`/api/notas/${id_objeto}`} className="notas-button">Notas del proyecto</Link>
             {idUsuario !== null && (
-                <Link to={`/projects/${idUsuario}`} className="return-button">Volver al inicio</Link>
+            <Link to={`/projects/${idUsuario}`} className="return-button">Volver al inicio</Link>
             )}
            
             
