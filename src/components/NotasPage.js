@@ -10,6 +10,7 @@ const NotasPage = () => {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState('');
   const { id_objeto } = useParams(); // Cambiar id_escena por id_objeto
+  const [notasEditadas, setNotaseditadas] = useState(newContent);
 
 
   
@@ -85,10 +86,10 @@ const NotasPage = () => {
   const handleUpdateNote = async (id, newContent) => {
     try {
       const response = await axios.put(`https://${NgrokUrl}/api/notas/${id}`, {
-        contenido: newContent
+        contenido: notasEditadas
       });
       if (response.status === 200) {
-        setNotes(notes.map((note) => (note.id_nota === id ? { ...note, contenido: newContent } : note)));
+        setNotes(notes.map((note) => (note.id_nota === id ? { ...note, contenido: updatedContent } : note)));
       } else {
         console.error('Failed to update note:', response.statusText);
       }
@@ -120,9 +121,10 @@ const NotasPage = () => {
                 <textarea
                   rows='3'
                   cols='30'
-                  value={note.contenido}
-                  onChange={(e) => handleUpdateNote(note.id_nota, e.target.value)}
+                  value={updatedContent}
+                  onChange={(e) =>  setNotaseditadas(e.target.value)}
                 ></textarea>
+                <button onClick={handleSaveChanges(note.id_nota)}>Guardar cambios</button>
                 <div className='note-footer'>
                   <small>{note.fecha}</small>
                   <MdDeleteForever
