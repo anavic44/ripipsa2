@@ -78,9 +78,9 @@ export const Projects2 = () => {
                                 <Tab.Content id = "slideImUp" className={isVisible? "animate_animated animate_slideInUp": ""}> 
                                     <Tab.Pane eventKey="first">
                                         <Row>
-                                            {projects.map((project, index) => (
-                                            <Col key={index} xs={12} sm={6} md={4}>
-                                                <ProjectCard {...project} />
+                                            {projectsInScene.map((project) => (
+                                                <Col key={project.id_objeto} xs={12} sm={6} md={4}>
+                                                    <ProjectCard {...project} />
                                                 </Col>
                                             ))}
                                         </Row>                           
