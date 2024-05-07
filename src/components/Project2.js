@@ -44,6 +44,7 @@ export const Projects2 = () => {
 
         fetchData();
     }, [userId]);
+
     return (
         <div>
             <NavBar />
@@ -54,8 +55,14 @@ export const Projects2 = () => {
                         <TrackVisibility>  
                         {({ isVisible }) => (
                         <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
-                            <h2>Proyectos de {userData.username}</h2>
-                            <p>Selecciona una escena para ver detalles específicos:</p>
+                            {userData ? (
+                            <> 
+                                <h2>Proyectos de {userData.username}</h2>
+                                <p>Selecciona una escena para ver detalles específicos:</p>
+                            </>
+                            ) : (
+                                <p>Cargando información del usuario...</p>
+                            )}
                             <Tab.Container id = "projects-tabs" defaultActiveKey={"first"}>
                                 <Nav variant = "pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                     <Nav.Item>
