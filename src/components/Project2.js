@@ -78,11 +78,11 @@ export const Projects2 = () => {
                                 <Tab.Content id = "slideImUp" className={isVisible? "animate_animated animate_slideInUp": ""}> 
                                     <Tab.Pane eventKey="first">
                                         <Row>
-                                            {scenes.map((scene, index) => (
-                                            <Col key={scene.id_escena} xs={12} sm={6} md={4}>
-                                                <ProjectCard title={scene.nombre} empresa={scene.empresa} />
-                                            </Col>
-                                        ))}
+                                        {projects.map((scene, index) => (
+                                            <Col key={index} xs={12} sm={6} md={4}>
+                                                <ProjectCard {...scene} />
+                                                </Col>
+                                            ))}
                                         </Row>                           
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
