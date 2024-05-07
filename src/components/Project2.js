@@ -18,22 +18,19 @@ export const Projects2 = () => {
         const fetchData = async () => {
             if (!userId) return; // Ensure userId is present
             try {
-                // Fetch user data and scenes
                 const userResponse = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
-                if (userResponse.data) {
-                    setUserData(userResponse.data);
-                }
-                // Fetch scenes for the user
-                const scenesResponse = await axios.get(`https://${NgrokUrl}/api/Escena/${userId}`);
-                if (Array.isArray(scenesResponse.data)) {
-                    setScenes(scenesResponse.data);
-                } else {
-                    console.error("Received non-array scenes data");
-                }
-                // Fetch all projects for the user directly without waiting for scene selection
+                setUserData(userResponse.data || {});
+    
                 const projectsResponse = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${userId}`);
                 if (Array.isArray(projectsResponse.data.projects)) {
-                    setProjects(projectsResponse.data.projects);
+                    const groupedByScene = projectsResponse.data.projects.reduce((acc, project) => {
+                        if (!acc[project.id_escena]) {
+                            acc[project.id_escena] = { ...project, objects: [] };
+                        }
+                        acc[project.id_escena].objects.push(project);
+                        return acc;
+                    }, {});
+                    setScenes(Object.values(groupedByScene));
                 } else {
                     console.error("Received non-array projects data");
                 }
@@ -41,10 +38,10 @@ export const Projects2 = () => {
                 console.error('Error fetching data:', error);
             }
         };
-
+    
         fetchData();
     }, [userId]);
-
+    
     return (
         <div>
             <NavBar />
@@ -80,7 +77,7 @@ export const Projects2 = () => {
                                         <Row>
                                             {scenes.map((scene, index) => (
                                             <Col key={scene.id_escena} xs={12} sm={6} md={4}>
-                                                <ProjectCard title={scene.nombre} empresa={scene.empresa} />
+                                                <ProjectCard title={`Scene ${scene.id_escena}`} description={`${scene.objects.length} objects`}  imgUrl={scene.objects[0].imgUrl}></ProjectCard>
                                             </Col>
                                         ))}
                                         </Row>                           
