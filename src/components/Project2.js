@@ -42,6 +42,7 @@ export const Projects2 = () => {
         fetchData();
     }, [userId]);
     
+
     return (
         <div>
             <NavBar />
@@ -77,7 +78,7 @@ export const Projects2 = () => {
                                         <Row>
                                             {scenes.map((scene, index) => (
                                             <Col key={scene.id_escena} xs={12} sm={6} md={4}>
-                                                <ProjectCard title={`Scene ${scene.id_escena}`} description={`${scene.objects.length} objects`}  imgUrl={scene.objects[0].imgUrl}></ProjectCard>
+                                                <ProjectCard title={scene.nombre} empresa={scene.empresa} />
                                             </Col>
                                         ))}
                                         </Row>                           
