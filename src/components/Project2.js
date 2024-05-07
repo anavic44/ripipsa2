@@ -90,7 +90,7 @@ export const Projects2 = () => {
                                         <p>No se que es esto 1</p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
-                                        <p>No se que es esto 2</p>
+                                        <p>No se que es esto 1</p>
                                     </Tab.Pane>
                                 </Tab.Content>
                             </Tab.Container>
