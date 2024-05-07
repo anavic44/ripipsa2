@@ -18,8 +18,5 @@ export const ProjectCard = ({ Titulo, Empresa, imgUrl, id_escena }) => {
 
       </div>
       </Link>
-   
-    
-    
   );
 };

@@ -31,7 +31,7 @@ const NotasPage = () => {
 
   const fetchUserIdFromSceneId = async (id_escena) => { // Update function parameter name
     try {
-      const response = await axios.get(`http://localhost:2023/api/userAndProjects2/${id_objeto}`);
+      const response = await axios.get(`http://localhost:2023/api/userAndProjects2/${id_escena}`);
       return response.data.userId;
     } catch (error) {
       console.error('Error fetching user id:', error);
@@ -50,7 +50,7 @@ const NotasPage = () => {
       if (id_usuario !== null) {
         try {
           const response = await axios.post(`http://localhost:2023/api/notas`, {
-            id_objeto: id_objeto,
+            id_escena: id_escena,
             contenido: noteText
           });
 
