@@ -77,7 +77,7 @@ const NotasPage = () => {
         } catch (error) {
           console.error('Error adding note:', error);
           // Show an error message to the user
-          setErrorMessage('Error adding note. Please try again later.');
+          setErrorMessage('Error adding notes. Please try again later.');
         }
       } else {
         console.error('Could not fetch user ID for scene:', id_escena);
