@@ -79,7 +79,7 @@ export const Projects2 = () => {
                                     <Tab.Pane eventKey="first">
                                         <Row>
                                             {projectsInScene.map((project) => (
-                                                <Col key={project.id_objeto} xs={12} sm={6} md={4}>
+                                                <Col key={project.id_escena} xs={12} sm={6} md={4}>
                                                     <ProjectCard {...project} />
                                                 </Col>
                                             ))}
