@@ -18,19 +18,22 @@ export const Projects2 = () => {
         const fetchData = async () => {
             if (!userId) return; // Ensure userId is present
             try {
+                // Fetch user data and scenes
                 const userResponse = await axios.get(`https://${NgrokUrl}/api/user/${userId}`);
-                setUserData(userResponse.data || {});
-    
+                if (userResponse.data) {
+                    setUserData(userResponse.data);
+                }
+                // Fetch scenes for the user
+                const scenesResponse = await axios.get(`https://${NgrokUrl}/api/Escena/${userId}`);
+                if (Array.isArray(scenesResponse.data)) {
+                    setScenes(scenesResponse.data);
+                } else {
+                    console.error("Received non-array scenes data");
+                }
+                // Fetch all projects for the user directly without waiting for scene selection
                 const projectsResponse = await axios.get(`https://${NgrokUrl}/api/userAndProjects/${userId}`);
                 if (Array.isArray(projectsResponse.data.projects)) {
-                    const groupedByScene = projectsResponse.data.projects.reduce((acc, project) => {
-                        if (!acc[project.id_escena]) {
-                            acc[project.id_escena] = { ...project, objects: [] };
-                        }
-                        acc[project.id_escena].objects.push(project);
-                        return acc;
-                    }, {});
-                    setScenes(Object.values(groupedByScene));
+                    setProjects(projectsResponse.data.projects);
                 } else {
                     console.error("Received non-array projects data");
                 }
@@ -38,10 +41,9 @@ export const Projects2 = () => {
                 console.error('Error fetching data:', error);
             }
         };
-    
+
         fetchData();
     }, [userId]);
-    
 
     return (
         <div>
@@ -84,10 +86,10 @@ export const Projects2 = () => {
                                         </Row>                           
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
-                                        <p>No se que es esto 1</p>
+                                        <p>Añadir escenas</p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
-                                        <p>No se que es esto 2</p>
+                                        <p>Eliminar escenas</p>
                                     </Tab.Pane>
                                 </Tab.Content>
                             </Tab.Container>
